@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: Poppins, sans-serif ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 20px;
+}
+
+#sidebar li{
+    list-style: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+#sidebar a{
+    text-decoration: none;
+    color: #ff0000;
+    width: 100%;
+    font-weight: 900;
+}
+
+.material-symbols-outlined{
+    margin-top: 30px;
+    margin-left: 16px;
+    color: #ff0000;
+}
+
+.close{
+    margin-top: 30px;
+    margin-left: 16px;
+    color: #ff0000;
+    font-size: 26px;
+}
+
+.content span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 15px;
+    opacity: 0;
+}
+
+#sidebar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100;
+    width: 270px;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 25px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#main{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.contain{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.card{
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.front{
+    backface-visibility: hidden;
+}
+
+.front img{
+    width: 80%;
+    
+}
+
+.back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bold;
+}
+
+.back ul a{
+    text-decoration: none;
+    font-size: 25px;
+    color: red;
+}
+
+
+
+#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.founder{
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+}
+
+.contact{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact h2{
+    margin-bottom: 10px;
+}
+
+.contact p{
+    margin-top: 8px;
+}
+
+svg{
+    margin-right: 7px;
+}
+
+
+
+button{
+    position: absolute;
+    right: 2%;
+    top: 35%;
+    font-size: 13px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 25px;
+    border-color: red;
+    border-width: 2px;
+    color: black;
+    box-shadow: 6px 6px 12px #acaaaa;
+    cursor: pointer;
+    z-index: 1;
+    transition: 1s ease-in-out;
+}
+
+button:hover{
+    background-color: red;
+    color: #fff;
+
+}
+
+.details svg{
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    #main{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .contain{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+        margin-left: 50px;
+    }
+
+    button{
+        position: absolute;
+        right: 25%;
+        top: 35%;
+        font-size: 13px;
+        padding: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 25px;
+        border-color: red;
+        border-width: 2px;
+        color: black;
+        box-shadow: 6px 6px 12px #acaaaa;
+        cursor: pointer;
+        z-index: 1;
+        transition: 1s ease-in-out;
+    }
+
+    #contact{
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+    }
+
+    .information img{
+        display: none;
+    }
+
+    .founder{
+        padding-right: 5px;
+    }
+     
+    .contact{
+        font-size: 18px;
+        padding-left: 15px;
+    }
+
+    .back{
+    top: 50%;
+    left: 50%;
+    }
+
+    .back ul a{
+        text-decoration: none;
+        font-size: 20px;
+        color: red;
+    }
+
+    .content span{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 601px){
+    #main{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .contain{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+        
+    }
+
+    button{
+        position: absolute;
+        right: 30%;
+        top: 35%;
+        font-size: 14px;
+        padding: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 30px;
+        border-color: red;
+        border-width: 2px;
+        color: black;
+        box-shadow: 6px 6px 12px #acaaaa;
+        cursor: pointer;
+        z-index: 1;
+        transition: 1s ease-in-out;
+    }
+
+    #contact{
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .information img{
+        opacity: 0;
+    }
+
+    .founder{
+        padding-right: 5px;
+    }
+     
+    .contact{
+        font-size: 15px;
+    }
+
+    .back{
+    top: 50%;
+    left: 45%;
+    }
+
+    .back ul a{
+        text-decoration: none;
+        font-size: 25px;
+        color: red;
+    }
+
+    .content span{
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: 768px){
+    #main{
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .contain{
+        display: flex;
+        flex-direction: row;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+        
+    }
+
+    button{
+        opacity: 1;
+        margin-bottom: 50px;
+        position: absolute;
+        right: 2%;
+        top: 35%;
+        font-size: 12px;
+        padding: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 35px;
+        border-color: red;
+        border-width: 2px;
+        color: black;
+        box-shadow: 6px 6px 12px #acaaaa;
+        cursor: pointer;
+        z-index: 1;
+        transition: 1s ease-in-out;
+    
+    }
+
+    #contact{
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    }
+
+    .information img{
+        display: none;
+    }
+
+    .founder{
+        padding-right: 5px;
+    }
+     
+    .contact{
+        font-size: 15px;
+    }
+
+    .back{
+    top: 50%;
+    left: 45%;
+    }
+
+    .back ul a{
+        text-decoration: none;
+        font-size: 18px;
+        color: red;
+    }
+
+    .content span{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px){
+    #main{
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+    }
+    
+    .contain{
+        display: flex;
+        flex-direction: row;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 40px;
+        
+    }
+
+    button{
+        opacity: 1;
+        position: absolute;
+    right: 2%;
+    top: 35%;
+    font-size: 13px;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
+    border-color: red;
+    border-width: 2px;
+    color: black;
+    box-shadow: 6px 6px 12px #acaaaa;
+    cursor: pointer;
+    z-index: 1;
+    }
+
+    #contact{
+     display: flex;
+    flex-direction: column;
+    }
+
+    .founder{
+        padding-right: 5px;
+    }
+     
+    .contact{
+        font-size: 15px;
+    }
+
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .back{
+    top: 50%;
+    left: 45%;
+    }
+
+    .back ul a{
+        text-decoration: none;
+        font-size: 20px;
+        color: red;
+    }
+
+    .information img{
+        display: list-item;
+    }
+
+}
+
+@media (min-width: 1200px){
+    #nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        padding: 20px 20px;
+    }
+    
+    #main{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .contain{
+        display: flex;
+        flex-direction: row;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100px;
+    }
+    
+    .card{
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .card:hover{
+        transform: rotateY(180deg);
+    }
+    
+    .front{
+        backface-visibility: hidden;
+    }
+    
+    .front img{
+        width: 80%;
+        
+    }
+    
+    .back{
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-weight: bold;
+    }
+    
+    .back ul a{
+        text-decoration: none;
+        font-size: 25px;
+        color: red;
+    }
+    
+    
+    
+    #contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .founder{
+        position: absolute;
+        right: 0;
+        padding-right: 20px;
+    }
+    
+    .contact{
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contact h2{
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    
+    .contact p{
+        margin-top: 8px;
+        font-size: 15px;
+    }
+    
+    svg{
+        margin-right: 7px;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .information img{
+        opacity: 1;
+    }
+    
+    
+    button{
+        position: absolute;
+        right: 2%;
+        top: 35%;
+        font-size: 13px;
+        padding: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 25px;
+        border-color: red;
+        border-width: 2px;
+        color: black;
+        box-shadow: 6px 6px 12px #acaaaa;
+        cursor: pointer;
+        z-index: 1;
+        transition: 1s ease-in-out;
+    }
+    
+    button:hover{
+        background-color: red;
+        color: #fff;
+    
+    }
+    
+    .details svg{
+        margin-right: 10px;
+    }
+}
